@@ -1,0 +1,171 @@
+/* 기존 style.css 다음에 연결하세요. */
+.prayer-slideshow {
+    position: relative;
+    overflow: hidden;
+    background: #193b30;
+    isolation: isolate
+}
+
+.prayer-slideshow .prayer-shot {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+    pointer-events: none
+}
+
+.prayer-slideshow .prayer-shot.is-active {
+    opacity: 1;
+    z-index: 1
+}
+
+.prayer-slideshow .prayer-shot img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: none
+}
+
+.prayer-slideshow .prayer-shot figcaption {
+    position: absolute;
+    inset: auto 0 0;
+    padding: 25px 18px 65px;
+    background: linear-gradient(transparent, #091f18d9);
+    color: #fff;
+    font-size: 13px;
+    line-height: 1.6;
+    letter-spacing: 0
+}
+
+.team-photo.prayer-slideshow {
+    aspect-ratio: 16/10;
+    height: auto;
+    min-height: 180px
+}
+
+.prayer-slideshow .prayer-controls {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+    color: white
+}
+
+.prayer-slideshow .prayer-control {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    min-height: 40px;
+    padding: 6px 10px;
+    background: #102d24d9;
+    border: 1px solid #ffffff66;
+    border-radius: 24px;
+    color: white;
+    font: inherit;
+    font-size: 14px;
+    cursor: pointer
+}
+
+.prayer-slideshow .prayer-counter {
+    font-size: 13px;
+    background: #102d24d9;
+    padding: 5px 12px;
+    border-radius: 20px;
+    min-width: 62px;
+    text-align: center
+}
+
+.prayer-slideshow .prayer-control:focus-visible {
+    outline: 3px solid #d3e6ae;
+    outline-offset: 3px
+}
+
+.hero>.prayer-slideshow {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    isolation: auto
+}
+
+.hero>.prayer-slideshow img {
+    filter: saturate(.65)
+}
+
+.hero>.prayer-slideshow .prayer-controls {
+    bottom: 65px;
+    justify-content: flex-end;
+    left: 6%;
+    right: 6%
+}
+
+.hero>.hero-shade {
+    z-index: 1;
+    pointer-events: none
+}
+
+.hero>.hero-inner,
+.hero>.hero-bottom {
+    z-index: 2;
+    pointer-events: none
+}
+
+.hero>.hero-inner a,
+.hero>.hero-inner button {
+    pointer-events: auto
+}
+
+.hero>.prayer-slideshow .prayer-controls {
+    z-index: 3
+}
+
+@media(max-width:760px) {
+    .hero>.prayer-slideshow .prayer-controls {
+        bottom: 65px;
+        right: 24px
+    }
+
+    .prayer-slideshow .prayer-control {
+        min-width: 40px;
+        min-height: 40px
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    .prayer-slideshow .prayer-shot {
+        transition: none
+    }
+}
+
+/* Keep hero controls above the dark overlay without covering title links. */
+.hero>.prayer-slideshow {
+    z-index: auto
+}
+
+.hero>.hero-shade {
+    z-index: 2
+}
+
+.hero>.hero-inner,
+.hero>.hero-bottom {
+    z-index: 3
+}
+
+.hero>.prayer-slideshow .prayer-controls {
+    z-index: 4
+}
+/* 홈 배경사진의 조작 버튼 숨기기 */
+.hero .prayer-controls {
+    display: none;
+}
+/* 모든 사진의 버튼과 사진 번호 숨기기 */
+.prayer-slideshow .prayer-controls {
+    display: none;
+}

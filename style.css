@@ -1,0 +1,1462 @@
+:root {
+    --green: #153b30;
+    --ink: #17372f;
+    --paper: #f7f8f4;
+    --lime: #d9e4c3;
+    --muted: #63756d
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px
+}
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Pretendard", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    word-break: keep-all;
+    line-height: 1.8
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+button {
+    font: inherit;
+    cursor: pointer
+}
+
+button,
+a,
+summary {
+    -webkit-tap-highlight-color: transparent
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+    outline: 3px solid #92b763;
+    outline-offset: 5px
+}
+
+header {
+    height: 82px;
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    border-bottom: 1px solid #ffffff24
+}
+
+.brand {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1.2
+}
+
+.brand b {
+    font-weight: 800
+}
+
+.brand span {
+    display: inline-block;
+    border-left: 1px solid #ffffff60;
+    font-size: 12px;
+    letter-spacing: 0;
+    margin-left: 16px;
+    padding-left: 16px
+}
+
+.header-link {
+    font-size: 14px;
+    border-bottom: 1px solid #ffffff80
+}
+
+.progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    z-index: 30;
+    background: var(--lime);
+    width: 0
+}
+
+.hero {
+    height: 94svh;
+    min-height: 680px;
+    max-height: 1100px;
+    position: relative;
+    color: white;
+    overflow: hidden;
+    background: var(--green)
+}
+
+.hero-img,
+.hero-shade {
+    position: absolute;
+    width: 100%;
+    height: 112%;
+    inset: -6% 0;
+    object-fit: cover
+}
+
+.hero-img {
+    object-position: center 42%;
+    filter: saturate(.55)
+}
+
+.hero-shade {
+    background: linear-gradient(90deg, rgba(9, 34, 25, .85), rgba(9, 34, 25, .38)), linear-gradient(0deg, rgba(9, 34, 25, .75), transparent 60%)
+}
+
+.hero-inner {
+    position: relative;
+    padding: 180px 10% 90px;
+    max-width: 1500px;
+    margin: auto
+}
+
+.eyebrow {
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    margin: 0 0 26px;
+    line-height: 1.5
+}
+
+.hero h1 {
+    font-size: clamp(52px, 6.4vw, 94px);
+    font-weight: 500;
+    letter-spacing: -5px;
+    line-height: 1.25;
+    margin: 32px 0
+}
+
+.hero h1 span {
+    color: var(--lime)
+}
+
+.hero-copy {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #edf0e9
+}
+
+.hero-cta {
+    display: inline-flex;
+    gap: 50px;
+    align-items: center;
+    border-bottom: 1px solid #b9cbb6;
+    padding: 12px 0;
+    margin-top: 25px;
+    font-size: 15px
+}
+
+.hero-cta span {
+    font-size: 24px
+}
+
+.hero-bottom {
+    position: absolute;
+    bottom: 28px;
+    left: 6%;
+    right: 6%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    letter-spacing: 1px
+}
+
+.wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 110px 36px
+}
+
+h2 {
+    font-size: clamp(30px, 3.4vw, 46px);
+    letter-spacing: -1.8px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 0 0 32px
+}
+
+.letter .eyebrow {
+    color: var(--muted)
+}
+
+.letter-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 100px;
+    margin-top: 45px
+}
+
+.letter-body {
+    font-size: 17px;
+    line-height: 2.05
+}
+
+.letter-body p {
+    margin: 0 0 24px
+}
+
+.signature {
+    font-weight: 600;
+    margin-top: 32px !important
+}
+
+.numbers {
+    border-left: 1px solid #d5ded4;
+    padding-left: 60px
+}
+
+.numbers div {
+    padding: 10px 0 30px
+}
+
+.numbers strong {
+    font-family: Georgia, serif;
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 1.2;
+    display: block
+}
+
+.numbers span {
+    font-size: 14px;
+    color: var(--muted)
+}
+
+.statement {
+    background: var(--green);
+    color: #fff;
+    text-align: center;
+    min-height: 650px
+}
+
+.statement .wrap {
+    padding-top: 95px;
+    padding-bottom: 90px
+}
+
+.statement .eyebrow {
+    color: var(--lime)
+}
+
+.statement h2 {
+    font-size: clamp(40px, 5vw, 68px);
+    line-height: 1.5;
+    letter-spacing: -2px
+}
+
+.statement h2 span {
+    opacity: .18;
+    transition: opacity .2s
+}
+
+.statement h2 em {
+    font-style: normal;
+    color: var(--lime);
+    opacity: .2;
+    transition: opacity .2s
+}
+
+.statement p:last-child {
+    color: #c1d0c7;
+    font-size: 16px;
+    margin-top: 40px
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 64px;
+    gap: 20px
+}
+
+.section-title h2 {
+    margin: 0
+}
+
+.sample-tag {
+    font-size: 12px;
+    border: 1px solid #c4d2c7;
+    padding: 8px 14px;
+    border-radius: 30px;
+    white-space: nowrap
+}
+
+.project {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+    margin-bottom: 130px
+}
+
+.project:last-child {
+    margin-bottom: 0
+}
+
+.project-image {
+    margin: 0;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    background: #d6e0d6
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.8s ease
+}
+
+.project-image.in-view img {
+    transform: scale(1.04)
+}
+
+.project-image figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 26px;
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: 2px;
+    background: linear-gradient(transparent, #0c261ca8)
+}
+
+.project-content h3 {
+    font-size: 42px;
+    line-height: 1.35;
+    font-weight: 500;
+    letter-spacing: -1.8px;
+    margin: 20px 0
+}
+
+.project-no {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700
+}
+
+.project-no span {
+    letter-spacing: 0;
+    color: var(--muted)
+}
+
+.project-content>p {
+    font-size: 16px;
+    color: #5b6b63
+}
+
+.project-content .subtitle {
+    color: var(--green);
+    font-weight: 600;
+    margin-bottom: 22px
+}
+
+dl {
+    font-size: 14px;
+    margin: 24px 0;
+    border-top: 1px solid #d9e0d7
+}
+
+dl div {
+    padding: 12px 0;
+    border-bottom: 1px solid #d9e0d7
+}
+
+dt {
+    font-weight: 600
+}
+
+dd {
+    margin: 3px 0 0;
+    color: var(--muted)
+}
+
+.prayer-note {
+    border-left: 2px solid #71966a;
+    padding-left: 18px;
+    margin-top: 26px
+}
+
+.prayer-note span {
+    font-size: 12px;
+    font-weight: 700;
+    color: #6c845e
+}
+
+.prayer-note p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 8px 0
+}
+
+.reverse .project-image {
+    order: 2
+}
+
+.reverse .project-content {
+    order: 1
+}
+
+.prayer-section {
+    background: #e9efe5
+}
+
+.prayer-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px
+}
+
+.prayer-layout h2 {
+    font-size: 34px
+}
+
+.prayer-layout p {
+    font-size: 16px;
+    color: #5b6b63
+}
+
+.outline {
+    margin-top: 20px;
+    border: 1px solid var(--green);
+    background: none;
+    color: var(--green);
+    padding: 12px 24px;
+    border-radius: 2px;
+    font-size: 14px
+}
+
+.prayer-list details {
+    border-bottom: 1px solid #becbbb;
+    padding: 22px 0
+}
+
+.prayer-list details:first-child {
+    border-top: 1px solid #becbbb
+}
+
+.prayer-list summary {
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+    padding-right: 30px
+}
+
+.prayer-list summary:after {
+    content: '+';
+    position: absolute;
+    right: 2px;
+    font-weight: 400;
+    font-size: 23px
+}
+
+.prayer-list details[open] summary:after {
+    content: '−'
+}
+
+.prayer-list summary span {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #6b8266;
+    margin-right: 20px
+}
+
+.prayer-list p {
+    padding-left: 43px;
+    margin: 16px 0 0;
+    line-height: 1.9
+}
+
+.feedback {
+    min-height: 24px;
+    margin-bottom: 0;
+    font-size: 14px !important
+}
+
+.support {
+    text-align: center;
+    padding-top: 125px;
+    padding-bottom: 125px
+}
+
+.support p {
+    font-size: 16px;
+    color: var(--muted)
+}
+
+.support .eyebrow {
+    font-size: 12px
+}
+
+.solid {
+    background: var(--green);
+    color: white;
+    border: 0;
+    padding: 16px 36px;
+    border-radius: 3px;
+    font-size: 15px;
+    margin-top: 25px
+}
+
+.solid:hover {
+    background: #285545
+}
+
+.support-note {
+    font-size: 13px !important;
+    margin-top: 26px
+}
+
+footer {
+    text-align: center;
+    border-top: 1px solid #dbe2d6;
+    padding: 50px 24px 85px;
+    font-size: 12px;
+    color: var(--muted)
+}
+
+footer .brand {
+    color: var(--green)
+}
+
+footer p {
+    margin: 16px 0 0
+}
+
+.prototype {
+    font-size: 12px
+}
+
+.credits {
+    margin-top: 18px;
+    font-size: 12px
+}
+
+.credits summary {
+    cursor: pointer
+}
+
+.credits a {
+    text-decoration: underline
+}
+
+.bottom-nav {
+    display: none
+}
+
+dialog {
+    border: 0;
+    padding: 45px;
+    max-width: 460px;
+    width: calc(100% - 36px);
+    color: var(--ink);
+    border-radius: 8px;
+    background: var(--paper)
+}
+
+dialog::backdrop {
+    background: #071e16aa;
+    backdrop-filter: blur(5px)
+}
+
+dialog h2 {
+    font-size: 32px;
+    margin-bottom: 20px
+}
+
+dialog p {
+    font-size: 15px
+}
+
+.close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    border: 0;
+    background: none;
+    font-size: 30px;
+    color: var(--ink)
+}
+
+.account-placeholder {
+    padding: 18px;
+    border: 1px solid #d6dfd1;
+    background: #edf1e9;
+    text-align: center;
+    margin: 25px 0
+}
+
+.dialog-note {
+    font-size: 13px;
+    color: var(--muted)
+}
+
+.close-button {
+    width: 100%
+}
+
+.js .reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity .9s ease, transform 1s cubic-bezier(.2, .65, .25, 1)
+}
+
+.js .reveal.in-view {
+    opacity: 1;
+    transform: translateY(0)
+}
+
+@media(min-width:1400px) {
+    .hero-inner {
+        padding-top: 200px
+    }
+}
+
+@media(max-width:760px) {
+    header {
+        height: 70px;
+        padding: 0 24px
+    }
+
+    .brand {
+        font-size: 17px
+    }
+
+    .brand span {
+        margin-left: 10px;
+        padding-left: 10px;
+        font-size: 11px
+    }
+
+    .header-link {
+        font-size: 12px
+    }
+
+    .hero {
+        height: 92svh;
+        min-height: 650px;
+        max-height: 900px
+    }
+
+    .hero-inner {
+        padding: 174px 30px 80px
+    }
+
+    .hero h1 {
+        font-size: 54px;
+        letter-spacing: -2.8px;
+        line-height: 1.3;
+        margin: 32px 0
+    }
+
+    .hero-img {
+        object-position: 56% center
+    }
+
+    .hero-shade {
+        background: linear-gradient(0deg, #0d2c22db, #0d2c2265), linear-gradient(90deg, #0d2c2280, transparent)
+    }
+
+    .hero .eyebrow {
+        font-size: 10px;
+        letter-spacing: 2px
+    }
+
+    .hero-copy {
+        font-size: 17px
+    }
+
+    .hero-bottom {
+        left: 30px;
+        right: 30px;
+        font-size: 10px;
+        bottom: 25px
+    }
+
+    .hero-bottom span:last-child {
+        display: none
+    }
+
+    .hero-cta {
+        font-size: 14px;
+        margin-top: 22px
+    }
+
+    .wrap {
+        padding: 78px 26px
+    }
+
+    h2 {
+        font-size: 30px;
+        letter-spacing: -1.2px
+    }
+
+    .letter-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        margin-top: 30px
+    }
+
+    .letter-body {
+        font-size: 16px;
+        line-height: 2
+    }
+
+    .numbers {
+        display: flex;
+        border-left: 0;
+        border-top: 1px solid #d5ded4;
+        padding: 26px 0 0;
+        gap: 30px
+    }
+
+    .numbers div {
+        flex: 1;
+        padding: 0
+    }
+
+    .numbers strong {
+        font-size: 72px
+    }
+
+    .numbers span {
+        font-size: 12px
+    }
+
+    .statement {
+        min-height: 570px
+    }
+
+    .statement .wrap {
+        padding-top: 74px;
+        padding-bottom: 70px
+    }
+
+    .statement h2 {
+        font-size: 45px;
+        line-height: 1.6
+    }
+
+    .statement p:last-child {
+        font-size: 14px
+    }
+
+    .section-title {
+        display: block;
+        margin-bottom: 36px
+    }
+
+    .sample-tag {
+        display: inline-block;
+        margin-top: 16px
+    }
+
+    .project {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 85px
+    }
+
+    .project-image {
+        height: 420px;
+        margin-left: -26px;
+        margin-right: -26px
+    }
+
+    .project-content h3 {
+        font-size: 36px
+    }
+
+    .reverse .project-image,
+    .reverse .project-content {
+        order: initial
+    }
+
+    .project-content>p {
+        font-size: 16px
+    }
+
+    .prayer-layout {
+        grid-template-columns: 1fr;
+        gap: 25px
+    }
+
+    .prayer-layout h2 {
+        font-size: 29px
+    }
+
+    .prayer-list summary {
+        font-size: 16px
+    }
+
+    .prayer-list summary span {
+        margin-right: 15px
+    }
+
+    .prayer-list p {
+        padding-left: 36px;
+        font-size: 15px
+    }
+
+    .support {
+        padding-top: 90px;
+        padding-bottom: 90px
+    }
+
+    .support h2 {
+        font-size: 29px
+    }
+
+    .support>p {
+        font-size: 15px
+    }
+
+    .bottom-nav {
+        position: fixed;
+        bottom: 14px;
+        left: 20px;
+        right: 20px;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        background: #153b30f5;
+        color: white;
+        border: 1px solid #ffffff22;
+        border-radius: 40px;
+        box-shadow: 0 5px 30px #071e1633;
+        backdrop-filter: blur(8px)
+    }
+
+    .bottom-nav a {
+        flex: 1;
+        text-align: center;
+        font-size: 13px;
+        padding: 14px 4px
+    }
+
+    .bottom-nav a+a {
+        border-left: 1px solid #ffffff26
+    }
+
+    .bottom-nav a.active {
+        color: var(--lime);
+        font-weight: 700
+    }
+
+    dialog {
+        padding: 36px 25px
+    }
+
+    footer {
+        padding-bottom: 110px
+    }
+
+    .eyebrow {
+        font-size: 11px;
+        letter-spacing: 2px
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    html {
+        scroll-behavior: auto
+    }
+
+    .js .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none
+    }
+
+    .hero-img {
+        transform: none !important
+    }
+
+    .statement h2 span,
+    .statement h2 em {
+        opacity: 1 !important
+    }
+
+    .project-image img {
+        transition: none !important;
+        transform: none !important
+    }
+}
+
+/* Twelve-team prayer letter */
+.hero {
+    height: 75svh;
+    min-height: 590px;
+    max-height: 800px
+}
+
+.hero-inner {
+    padding-top: 145px
+}
+
+.hero h1 {
+    font-size: clamp(50px, 5.5vw, 76px)
+}
+
+.intro {
+    padding-bottom: 65px
+}
+
+.intro-text {
+    max-width: 720px;
+    font-size: 17px;
+    line-height: 2
+}
+
+.team-section {
+    padding-top: 45px
+}
+
+.team-section .section-title {
+    margin-bottom: 28px
+}
+
+.team-jump {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 42px
+}
+
+.team-jump a {
+    border: 1px solid #c4d2c7;
+    width: 42px;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 14px;
+    border-radius: 3px
+}
+
+.team-jump a:hover {
+    background: var(--green);
+    color: #fff
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px 32px
+}
+
+.team-card {
+    scroll-margin-top: 28px
+}
+
+.team-heading {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    min-height: 84px;
+    margin-bottom: 14px
+}
+
+.team-number {
+    font: 42px Georgia, serif;
+    color: #799471;
+    line-height: 1
+}
+
+.team-label {
+    font-size: 12px;
+    color: var(--muted);
+    margin: 0 0 4px
+}
+
+.team-heading h3 {
+    font-size: 25px;
+    line-height: 1.4;
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin: 0
+}
+
+.team-photo {
+    height: auto;
+    aspect-ratio: 16/10;
+    position: relative;
+    margin: 0;
+    background: #e8ede4;
+    overflow: hidden
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block
+}
+
+.photo-label {
+    position: absolute;
+    bottom: 10px;
+    right: 12px;
+    background: #153b30c9;
+    color: #fff;
+    padding: 3px 10px;
+    font-size: 12px
+}
+
+.photo-placeholder {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px dashed #bdcbb8;
+    color: #73816c
+}
+
+.photo-placeholder span {
+    font-size: 22px
+}
+
+.photo-placeholder small {
+    font-size: 13px
+}
+
+.team-copy>p {
+    font-size: 16px;
+    line-height: 1.9;
+    margin: 20px 0 18px
+}
+
+.team-prayers {
+    border-top: 1px solid #d4decf;
+    padding-top: 15px
+}
+
+.team-prayers h4 {
+    font-size: 13px;
+    color: #617b57;
+    margin: 0 0 8px
+}
+
+.team-prayers ul {
+    padding-left: 20px;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.9
+}
+
+.team-prayers li+li {
+    margin-top: 6px
+}
+
+.copy-row {
+    text-align: center;
+    margin-top: 55px
+}
+
+.support {
+    border-top: 1px solid #dbe2d6;
+    padding-top: 85px;
+    padding-bottom: 80px
+}
+
+.support-information {
+    max-width: 540px;
+    margin: 30px auto 0;
+    text-align: left;
+    border-top: 1px solid #d4decf
+}
+
+.support-information div {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 14px 0;
+    border-bottom: 1px solid #d4decf;
+    font-size: 14px
+}
+
+.support-information span {
+    color: var(--muted)
+}
+
+.support-information strong {
+    font-weight: 500
+}
+
+.greetings {
+    background: #e9efe5
+}
+
+.greeting-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px
+}
+
+.greeting h2 {
+    font-size: 28px;
+    margin: 23px 0
+}
+
+.greeting p {
+    font-size: 16px;
+    line-height: 2
+}
+
+.draft-label {
+    font-size: 12px;
+    color: #000000
+}
+
+.greeting .signature {
+    font-size: 14px
+}
+
+.hero-bottom span:last-child {
+    display: none
+}
+
+@media(max-width:760px) {
+    .hero {
+        height: 78svh;
+        min-height: 590px
+    }
+
+    .hero-inner {
+        padding: 140px 26px 70px
+    }
+
+    .hero h1 {
+        font-size: 48px
+    }
+
+    .intro {
+        padding-bottom: 35px
+    }
+
+    .intro-text {
+        font-size: 16px
+    }
+
+    .team-section {
+        padding-top: 35px
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 48px
+    }
+
+    .team-heading {
+        min-height: 65px;
+        margin-bottom: 12px
+    }
+
+    .team-heading h3 {
+        font-size: 23px
+    }
+
+    .team-number {
+        font-size: 36px
+    }
+
+    .team-jump {
+        gap: 7px;
+        margin-bottom: 25px
+    }
+
+    .team-jump a {
+        width: calc((100% - 35px)/6)
+    }
+
+    .team-copy>p {
+        margin-top: 16px;
+        font-size: 15px
+    }
+
+    .team-prayers ul {
+        font-size: 14px
+    }
+
+    .greeting-grid {
+        grid-template-columns: 1fr;
+        gap: 35px
+    }
+
+    .greeting h2 {
+        font-size: 27px
+    }
+
+    .greeting p {
+        font-size: 15px
+    }
+
+    .support-information div {
+        font-size: 13px
+    }
+
+    .support h2 {
+        font-size: 28px
+    }
+
+    .support {
+        padding-top: 65px;
+        padding-bottom: 65px
+    }
+}
+
+/* Content edition */
+.brand,
+.brand b {
+    font-weight: 700;
+    letter-spacing: .7px
+}
+
+.brand span {
+    font-weight: 400
+}
+
+.team-greeting {
+    border-top: 1px solid #d4decf;
+    padding: 12px 0;
+    margin-bottom: 8px
+}
+
+.team-greeting summary {
+    font-size: 14px;
+    color: var(--green);
+    cursor: pointer
+}
+
+.team-greeting p {
+    font-size: 15px;
+    line-height: 1.95;
+    color: #52645b
+}
+
+.pending-text {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0
+}
+
+.contact-list {
+    margin: 22px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.contact-list p {
+    margin: 0;
+    font-size: 13px
+}
+
+.contact-list a {
+    font-size: 15px;
+    text-decoration: underline;
+    text-underline-offset: 4px
+}
+
+.hero h1 {
+    font-size: clamp(46px, 5.2vw, 72px);
+    letter-spacing: -2.4px
+}
+
+.greeting-grid {
+    grid-template-columns: .75fr 1.25fr
+}
+
+.greeting h2 {
+    font-size: 26px
+}
+
+.team-photo {
+    aspect-ratio: 16/8
+}
+
+.support-information strong {
+    overflow-wrap: anywhere
+}
+
+@media(max-width:760px) {
+    .hero h1 {
+        font-size: clamp(32px, 8.6vw, 48px);
+        letter-spacing: -1.8px
+    }
+
+    .hero-copy {
+        font-size: 15px
+    }
+
+    .greeting-grid {
+        grid-template-columns: 1fr
+    }
+
+    .team-photo {
+        aspect-ratio: 16/9
+    }
+}
+/* 홈 배경 그라데이션 — PC·모바일 공통 */
+.hero > .hero-shade {
+    background: linear-gradient(
+        to bottom,
+        rgba(9, 34, 25, 0.1) 0%,
+        rgba(9, 34, 25, 0.3) 50%,
+        rgba(10, 36, 122, 0.6) 100%
+    );
+}
+/* 충남대 캠퍼스 분위기의 블루 테마 */
+:root {
+    --green: #15345B;
+    --ink: #15345B;
+    --paper: #F7FAFE;
+    --lime: #B9DFFF;
+    --muted: #61738B;
+}
+
+/* 홈 배경을 어두운 네이비로 */
+.hero > .hero-shade {
+    background: linear-gradient(
+        to bottom,
+        rgba(6, 20, 45, 0.15) 0%,
+        rgba(6, 20, 45, 0.7) 50%,
+        rgba(6, 20, 45, 0.75) 100%
+    );
+}
+
+/* 홈 문구 가독성 */
+.hero-inner {
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.hero-copy {
+    color: #FFFFFF;
+}
+
+/* 팀 번호와 기도제목 */
+.team-number,
+.team-prayers h4 {
+    color: #2475C7;
+}
+
+/* 사진 준비 중 영역 */
+.team-photo {
+    background: #EAF2FB;
+}
+
+.photo-placeholder {
+    border-color: #BDCEE2;
+    color: #61738B;
+}
+
+/* 인사말 구역 */
+.greetings {
+    background: #EAF2FB;
+}
+
+/* 버튼에 마우스를 올렸을 때 */
+.solid:hover {
+    background: #2475C7;
+}
+
+/* 모바일 하단 메뉴 */
+.bottom-nav {
+    background: #15345BF5;
+}
+
+/* 제목 첫 줄 */
+.hero h1 {
+    color: #FFFFFF;
+}
+
+/* 제목 둘째 줄: 복음을 전합니다. */
+.hero h1 span {
+    color: #2478bd;
+}
+
+/* 제목 아래 설명 */
+.hero-copy {
+    color: #FFFFFF;
+}
+
+/* 2026 AUTUMN · PRAYER LETTER */
+.hero .eyebrow {
+    color: #D5E8FF;
+}
+/* CNU와 CCC 크기·두께 통일 */
+header .brand {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+header .brand b,
+header .brand .logo-cnu {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+}
+
+header .brand .logo-cnu {
+    display: inline;
+    color: #2478bd;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+.hero h1 strong {
+    font-weight: 800;
+}
+/* 섹션 사이 구분선 */
+.section-divider {
+    border: 0;
+    height: 1px;
+    width: 85%;
+    max-width: 1050px;
+    margin: 40px auto;
+}
+/* 두 인사말을 위아래로 배치 */
+.greeting-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+/* 인사말 사이 구분선 */
+.greeting-divider {
+    border: 0;
+    border-top: 1px solid #BDCEE2;
+    width: 100%;
+    margin: 0;
+}
