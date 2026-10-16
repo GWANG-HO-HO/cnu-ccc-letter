@@ -1460,3 +1460,44 @@ header .brand .logo-cnu {
     width: 100%;
     margin: 0;
 }
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  width: 80%;               /* 구분선 전체 너비 */
+  max-width: 480px;
+  margin: 40px auto;        /* 위아래 여백 + 가운데 정렬 */
+
+  color: #BDCEE2;           /* 가운데 십자가 색상 */
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;              /* 선 두께 */
+  background: #BDCEE2;      /* 양쪽 선 색상 */
+}
+
+.section-divider span {
+  font-size: 18px;
+  line-height: 1;
+/* 접힌 상태: 읽기만 표시 */
+details.team-greeting:not([open]) > summary .when-closed {
+  display: inline !important;
+}
+
+details.team-greeting:not([open]) > summary .when-open {
+  display: none !important;
+}
+
+/* 펼친 상태: 접기만 표시 */
+details.team-greeting[open] > summary .when-closed {
+  display: none !important;
+}
+
+details.team-greeting[open] > summary .when-open {
+  display: inline !important;
+}

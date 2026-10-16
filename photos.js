@@ -25,8 +25,8 @@ window.PRAYER_PHOTOS = {
 
   ],
   "team-04": [
-
-    { src: "assets/team-04-2.webp" },
+    { src: "assets/team-04-1.png" },
+    { src: "assets/team-04-2.webp" }
 
   ],
   "team-05": [
@@ -60,7 +60,7 @@ window.PRAYER_PHOTOS = {
 
   ],
   "team-11": [
-    { src: "assets/team-11-1.webp" },
+    { src: "assets/team-11-1.png" },
     { src: "assets/team-11-2.webp" },
 
   ],
