@@ -65,8 +65,8 @@ window.PRAYER_PHOTOS = {
 
   ],
   "team-12": [
-
-    { src: "assets/team-12-2.webp" },
+    { src: "assets/team-12-1.jpg" },
+    { src: "assets/team-12-2.webp"}
 
   ]
 };
